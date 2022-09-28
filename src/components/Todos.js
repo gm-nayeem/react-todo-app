@@ -7,14 +7,14 @@ export default function Todos(props) {
 
   return (
     <section className={style.todos}>
-       {props.todos.map((todo) => 
-          <Todo 
-            todo={todo.newTodo} 
-            key={todo.id} 
-            id={todo.id} 
-            onRemoveTodo={props.onRemoveTodo}
-          />
-       )}
+      {props.todos.map((todo) =>
+        <Todo
+          todo={todo.newTodo}
+          key={todo.id}
+          id={todo.id}
+          onRemoveTodo={props.onRemoveTodo}
+        />
+      )}
     </section>
   )
 }

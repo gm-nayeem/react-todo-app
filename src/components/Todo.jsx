@@ -1,25 +1,24 @@
 import React from 'react'
 
-import style  from './todo.module.css'
+import style from './todo.module.css'
 
 export default function Todo(props) {
-    const {title, description} = props.todo;
-    const {id} = props;
+  const { title, description } = props.todo;
+  const { id } = props;
 
-    const handleClick = (id) => {
-      props.onRemoveTodo(id)
-    }
+  const handleClick = (id) => {
+    props.onRemoveTodo(id)
+  }
 
   return (
     <article className={style.todo}>
-        <div>
-            <h3>{title}</h3>
-            <p>{description}</p>
-        </div>
-        <button className={style.btn} onClick={() => 
-          {handleClick(id)}}>
-            <i className='fa fa-trash fa-2x'></i>
-        </button>
+      <div>
+        <h3>{title}</h3>
+        <p>{description}</p>
+      </div>
+      <button className={style.btn} onClick={() => { handleClick(id) }}>
+        <i className='fa fa-trash fa-2x'></i>
+      </button>
     </article>
   )
 }
